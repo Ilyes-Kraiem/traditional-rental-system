@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Rent an outfit</title>
+  <script src="controles.js" defer></script>
+  <link href="mesStyles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <form onsubmit="return verif2()" action="location.php" method="post" class="card">
+    <fieldset>
+      <legend>Rent an outfit</legend>
+      <table>
+        <tbody>
+          <tr>
+            <td><label for="habit">Outfit code</label></td>
+            <td><input type="text" name="habit" id="habit" class="input" /></td>
+          </tr>
+          <tr>
+            <td><label for="cin">Customer ID (CIN)</label></td>
+            <td><input type="text" name="cin" id="cin" class="input" /></td>
+          </tr>
+          <tr>
+            <td><label for="duree">Rental duration (days)</label></td>
+            <td><input type="text" name="duree" id="duree" class="input" /></td>
+          </tr>
+          <tr>
+            <td>
+              <input type="reset" value="Clear" class="btn secondary" />
+              <input type="submit" value="Confirm rental" class="btn primary" />
+            </td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </fieldset>
+  </form>
+</body>
+</html>

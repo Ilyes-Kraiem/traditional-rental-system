@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Add a new outfit</title>
+  <script src="controles.js" defer></script>
+  <link href="mesStyles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <form onsubmit="return verif1()" action="ajout.php" method="post" class="card">
+    <fieldset>
+      <legend>Add a new outfit</legend>
+      <table>
+        <tbody>
+          <tr>
+            <td><label for="select">Category</label></td>
+            <td>
+              <select name="categorie" id="select" class="input">
+                <option value="0">Choose a category</option>
+                <option value="1">Evening dress</option>
+                <option value="2">Wedding dress</option>
+                <option value="3">Caftan</option>
+                <option value="4">Suit</option>
+                <option value="5">Jebba</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="desc">Description</label></td>
+            <td>
+              <input
+                type="text"
+                name="desc"
+                id="desc"
+                class="input"
+                placeholder="Between 10 and 100 characters"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Size</td>
+            <td class="size-group">
+              <label><input type="radio" name="taille" value="S" id="r1" /> S</label>
+              <label><input type="radio" name="taille" value="M" id="r2" /> M</label>
+              <label><input type="radio" name="taille" value="L" id="r3" /> L</label>
+              <label><input type="radio" name="taille" value="X" id="r4" /> XL</label>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="prix">Rental price (TND)</label></td>
+            <td>
+              <input
+                type="number"
+                name="prix"
+                id="prix"
+                class="input"
+                min="100"
+                max="2000"
+                placeholder="Between 100 and 2000"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <input type="reset" value="Clear" class="btn secondary" />
+              <input type="submit" value="Save outfit" class="btn primary" />
+            </td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </fieldset>
+  </form>
+</body>
+</html>
